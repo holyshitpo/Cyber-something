@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4a6d7">
+  <title>CYBERHEART 2005 — the internet is yours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="top-strip">
+      <span>✦ welcome to the internet ✦</span>
+      <span id="clock">loading time...</span>
+    </div>
+
+    <header class="hero">
+      <div class="hero-stickers" aria-hidden="true">★　♡　✿　★</div>
+      <p class="eyebrow">YOUR DAILY DOSE OF OLD INTERNET</p>
+      <h1>CYBER<span>HEART</span><small>2005</small></h1>
+      <p class="tagline">~ where pixels have feelings ~</p>
+      <div class="marquee"><span>WELCOME ONLINE! ✦ SIGN THE GUESTBOOK ✦ BE NICE TO EACH OTHER ✦ POST SOMETHING COOL ✦ WELCOME ONLINE! ✦</span></div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">⌂ HOME</a><a href="#forums">▤ FORUMS</a><a href="#members">☺ MEMBERS</a>
+      <a href="#guestbook">♡ GUESTBOOK</a><a href="#about">✧ ABOUT</a>
+    </nav>
+
+    <div class="layout" id="home">
+      <aside class="sidebar">
+        <section class="panel profile-card">
+          <h2>★ YOUR PROFILE ★</h2>
+          <div class="avatar" aria-hidden="true">૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</div>
+          <strong id="welcome-name">internet stranger</strong>
+          <p class="tiny">status: <span class="online">● ONLINE</span></p>
+          <label for="username">display name</label>
+          <input id="username" maxlength="18" placeholder="your nickname">
+          <button id="save-name" class="button">SAVE PROFILE</button>
+          <p class="tiny">member since: whenever ♡</p>
+        </section>
+
+        <section class="panel">
+          <h2>✿ QUICK LINKS ✿</h2>
+          <ul class="link-list">
+            <li><a href="#forums">» latest discussions</a></li>
+            <li><a href="#new-topic">» start a topic</a></li>
+            <li><a href="#guestbook">» leave a message</a></li>
+            <li><a href="#about">» site credits</a></li>
+          </ul>
+        </section>
+
+        <section class="panel stats">
+          <h2>VISITOR COUNTER</h2>
+          <div class="counter" id="visitor-count">000042</div>
+          <p class="tiny">you are visitor #maybe!</p>
+          <div class="pixel-heart">♥ ♥ ♥</div>
+        </section>
+
+        <section class="panel">
+          <h2>NOW PLAYING ♫</h2>
+          <div class="music-box">
+            <span class="disc">♫</span>
+            <div><b>your imaginary mixtape</b><br><span class="tiny">press play in your heart</span></div>
+          </div>
+          <p class="tiny">No copyrighted music included. Add your own audio link here!</p>
+        </section>
+      </aside>
+
+      <main>
+        <section class="welcome-box panel">
+          <div>
+            <span class="badge">✦ YOU MADE IT ✦</span>
+            <h2>HELLO, NETIZEN!</h2>
+            <p>Remember when the internet felt like a bedroom wall covered in stickers? This is that place. Make friends, share your obsessions, post your art and leave a little sparkle behind.</p>
+          </div>
+          <div class="welcome-art" aria-hidden="true">♡<br><small>u & me<br>online</small></div>
+        </section>
+
+        <section class="panel forum-section" id="forums">
+          <div class="section-heading">
+            <h2>▤ THE MESSAGE BOARDS</h2>
+            <span class="tiny">choose your corner of the web</span>
+          </div>
+          <div class="forum-categories">
+            <button class="category active" data-category="all">ALL BOARDS</button>
+            <button class="category" data-category="general">GENERAL</button>
+            <button class="category" data-category="music">MUSIC</button>
+            <button class="category" data-category="art">ART & WEB</button>
+            <button class="category" data-category="games">GAMES</button>
+          </div>
+          <div class="search-row">
+            <input id="search" type="search" placeholder="search the forums...">
+            <button id="search-clear" class="button secondary">CLEAR</button>
+          </div>
+          <div class="thread-list" id="thread-list" aria-live="polite"></div>
+        </section>
+
+        <section class="panel new-topic" id="new-topic">
+          <div class="section-heading"><h2>✎ START A NEW THREAD</h2><span class="tiny">the floor is yours!</span></div>
+          <form id="topic-form">
+            <div class="form-grid">
+              <label>topic title<input id="topic-title" required maxlength="70" placeholder="what's on your mind?"></label>
+              <label>board<select id="topic-category"><option value="general">General</option><option value="music">Music</option><option value="art">Art & Web</option><option value="games">Games</option></select></label>
+            </div>
+            <label>your message<textarea id="topic-body" required maxlength="1200" rows="4" placeholder="dear internet diary..."></textarea></label>
+            <button class="button" type="submit">✦ POST THREAD ✦</button>
+            <p class="tiny" id="form-message" role="status">Be kind. The internet is better that way.</p>
+          </form>
+        </section>
+
+        <section class="panel guestbook" id="guestbook">
+          <div class="section-heading"><h2>♡ THE GUESTBOOK</h2><span class="tiny">leave your mark</span></div>
+          <form id="guest-form" class="guest-form">
+            <input id="guest-name" maxlength="22" placeholder="your name" required>
+            <input id="guest-message" maxlength="140" placeholder="say something nice..." required>
+            <button class="button" type="submit">SIGN IT!</button>
+          </form>
+          <div id="guest-entries" class="guest-entries"></div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer panel" id="about">
+      <div class="footer-stars">✧･ﾟ: *✧･ﾟ:* 　　 *:･ﾟ✧*:･ﾟ✧</div>
+      <b>CYBERHEART 2005</b> — made with HTML, CSS & a little nostalgia ♡
+      <p class="tiny">Best viewed with a curious mind · Be excellent to each other · © 2005-ish</p>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+  </div>
+  <dialog id="reply-dialog" class="reply-dialog">
+    <form method="dialog" class="dialog-head"><strong id="reply-title">THREAD</strong><button aria-label="Close">✕</button></form>
+    <div id="reply-content"></div>
+    <form id="reply-form">
+      <label>reply<textarea id="reply-text" rows="3" required maxlength="500" placeholder="write a reply..."></textarea></label>
+      <button class="button" type="submit">POST REPLY</button>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
